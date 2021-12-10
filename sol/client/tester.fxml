@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<GridPane fx:controller="guizilla.sol.client.Controller" xmlns:fx="http://javafx.com/fxml" alignment="TOP_LEFT" hgap="10" vgap="5">
+	<padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+  
+  	<columnConstraints>
+    	<ColumnConstraints hgrow="ALWAYS" minWidth="150.0" prefWidth="150.0" maxWidth="150.0"/>
+  	</columnConstraints>
+
+  	<rowConstraints>
+    	<RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP"/>
+    	<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  	</rowConstraints>
+
+    <HBox alignment="TOP_LEFT" spacing="5.0">
+  	 <Button fx:id="backButton" text="Back" onAction="#goBack" minWidth="75.0" GridPane.columnIndex="0" GridPane.rowIndex="0"
+		    GridPane.columnSpan="1"  />
+
+	   <TextField fx:id="urlText"  minWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.columnSpan="3" />
+
+	   <Button fx:id="forwardButton" text="==>" onAction="#goToURL" minWidth="75.0" GridPane.columnIndex="4" GridPane.rowIndex="0"
+		  GridPane.columnSpan="1" />
+
+	   <Button fx:id="quitButton" text="Quit" onAction="#quit" minWidth="75.0" GridPane.columnIndex="5" GridPane.rowIndex="0"
+		  GridPane.columnSpan="1" />
+    </HBox>
+
+    <ScrollPane GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="6" minWidth="400.0">
+
+      <VBox fx:id="theVBox" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="6" />
+
+    </ScrollPane>
+
+</GridPane>
